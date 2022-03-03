@@ -1,0 +1,10 @@
+.image{
+    width: 400px;
+    height: 500px;
+    background-image: url("before-smile.png");
+    background-repeat: no-repeat;
+}
+
+.image:hover{
+    background-image: url("after-smile.png");
+}

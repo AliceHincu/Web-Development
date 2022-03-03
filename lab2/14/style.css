@@ -1,0 +1,29 @@
+.thumbnail {
+    border: 1px solid #000;
+    border-radius: 4px;
+    padding: 5px;
+    width:  200px;
+    height: 200px;
+}
+
+.thumbnail:hover {
+    box-shadow: 0 0 15px black;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    position: absolute;
+    top: 69%;
+}
+
+.rowWrapper #hoverShow {
+    display: none;
+    position: fixed;
+    top: 5%;
+    left: 25%;
+}
+
+.rowWrapper:hover #hoverShow {
+    display: block;
+}

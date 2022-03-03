@@ -1,0 +1,37 @@
+<!-- Write a web page which should contain on a row several thumbnail 
+    images and above that row should contain a larger image. If the 
+    mouse is over a thumbnail image, the larger version of that image 
+    should appear above it.
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <meta charset="UTF-8">
+        <title>14</title>
+    </head>
+
+    <body>
+        <div class="grid-container">
+			<div class="rowWrapper"> 
+                <img src="img1.jpg" class="thumbnail">
+				<div id="hoverShow">
+					<img src="img1.jpg" width="400" height="400">	
+				</div>
+			</div>
+			<div class="rowWrapper"> <img src="img2.jpg" class="thumbnail">
+				<div id="hoverShow">
+					<img src="img2.jpg" width="600" height="400">
+				</div>
+			</div>
+			<div class="rowWrapper"> <img src="img3.jpg" class="thumbnail">
+				<div id="hoverShow">
+					<img src="img3.jpg" width="600" height="400">
+				</div>
+			</div>			
+		</div>
+		<a name="#gallery"></a>
+    </body>
+</html>

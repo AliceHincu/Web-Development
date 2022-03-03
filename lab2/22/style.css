@@ -1,0 +1,16 @@
+.box {
+	width: 15%;
+	height: 15%;
+	background-color: aqua;
+
+	position: absolute;
+	left: 0%;
+	top: 0px;
+
+    transition: left 8s, transform 8s;
+}
+
+.box:hover {
+	left: 85%;
+    transform: rotate(360deg);
+}

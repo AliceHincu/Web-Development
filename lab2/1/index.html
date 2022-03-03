@@ -1,0 +1,24 @@
+<!--  Write a web page in which display using style sheets the 3D 
+    button push effect when the mouse is over it. Develop two versions 
+    of this effect.-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <meta charset="UTF-8">
+        <title>1</title>
+    </head>
+
+    <body>
+        <button style="width: 130px; height: 50px; border-radius: 10px;">
+           Normal button
+        </button>
+        <p>Tipul 1 alcatuit din 2 divuri: "umbra" care e o culoare mai inchisa si culoarea propriu zisa care creeaza iluzia de 3d printr-o transformare unde urc block-ul mai sus</p>
+        <button class="fancy-button-back">
+            <span class="fancy-button-front">Fancy button</span>
+        </button>
+        <p>Tipul 2 creeaza iluzia 3d prin 2 box shadow-uri. Cand nu e apasat, umbra e in exterior, iar cand e apasat, umbra e in interior.</p>
+        <button class="butt">PUSH</button>
+    </body>
+</html>

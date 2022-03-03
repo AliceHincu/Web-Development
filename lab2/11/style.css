@@ -1,0 +1,7 @@
+.box-gradient{
+    position:absolute;
+    width: 15%;
+    height: 15%;
+
+    background-image: -webkit-linear-gradient(left, transparent, red, transparent);
+}

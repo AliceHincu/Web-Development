@@ -1,0 +1,17 @@
+.box{
+    width: 15%;
+    height: 15%;
+    background-color: aqua;
+
+    position:absolute;
+    top: 0%;
+    left: 0%;
+
+    transition: top 8s, left 8s, background-color 8s;
+}
+
+.box:hover {
+	left: 85%;
+    top: 85%;
+    background-color: red;
+}

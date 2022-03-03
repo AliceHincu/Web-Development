@@ -1,0 +1,38 @@
+.ball-infinite{
+  position: absolute;
+  width:20vh;
+  height:20vh;
+  left: 25vh;
+  background-color:green;
+  border-radius:50%;
+  top:0%;
+
+  animation-name: bounce;
+  animation-duration: 1s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.5, 0.05, 1, 0.5)
+}
+
+.ball-hover{
+    position: absolute;
+    text-align:center;
+    width:20vh;
+    height:20vh;
+    background-color:green;
+    border-radius:50%;
+    top:0%;
+}
+
+.bounce:hover {
+  animation-name: bounce;
+  animation-duration: 10s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.5, 0.05, 1, 0.5)
+}
+
+@keyframes bounce {
+0%   { transform: translateY(0); }
+100% { transform: translateY(85vh); }
+}
