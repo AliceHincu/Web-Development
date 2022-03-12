@@ -1,0 +1,450 @@
+html {
+    font-family: "Proxima Nova",Helvetica,Arial,sans-serif;
+}
+
+body{
+    background-color: #f4f4f4;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #222;
+    margin: 0;
+    display: block;
+}
+
+div, article, span{
+    display: block;
+}
+
+.nav-container{
+    width: 100%;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 500;
+    box-shadow: 0 1px 3px rgb(0 0 0 / 10%);
+    box-sizing: inherit;
+}
+
+.nav-wrapper{
+    position: relative;
+    margin: 0 auto;
+    max-width: 71rem;
+    padding: 0 1rem;
+}
+
+.nav-main{
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0.8rem 0 0;
+}
+
+.nav-menu{
+    padding: 0.5rem;
+    margin: 0 0.5rem 0 -0.5rem;
+    cursor: pointer;
+}
+
+.nav-logo{
+    max-width: 8.5rem;
+    height: 1.75rem;
+    cursor: pointer;
+}
+
+.nav-bar{
+    position: relative;
+    width: 100%;  
+    overflow-x: hidden; 
+    white-space: nowrap;
+    padding: 0.4rem 0;
+}
+
+.nav-link-list{
+    position: relative;
+    margin: 0 1rem 0 0.5rem;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.nav-link-item{
+    margin-right: 2rem;
+    font-size: 0.9rem;
+    font-weight: 750;
+    cursor: pointer;
+    /* color: #0f65ef; */
+}
+
+.nav-icons-container{
+    position: absolute;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    top: 1.1rem;
+    right: 0rem;
+}
+
+.nav-heart{
+    position: relative;
+    padding-right: 1rem;
+    cursor: pointer;
+}
+
+.nav-sign-in{
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 590;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+}
+
+.nav-glass{
+    position: relative;
+    cursor: pointer;
+    margin: 0 0.2rem 0 0.5rem;
+}
+
+.nav-stickers{
+    display: none;
+    position: relative;
+    width: 13rem;
+    height: 3rem;   
+    margin-left: 0 0 0 0.3rem;
+    padding: 0;
+}
+
+
+@media screen and (min-width: 790px){
+    .nav-container{
+        padding: 0.5rem 0;
+    }
+
+    .nav-main{
+        flex-wrap: nowrap;
+        padding: 0;
+    }
+    
+    .nav-logo{
+        flex-grow: 0;
+        margin-right: 1.5rem;
+    }
+
+    .nav-icons-container{
+        position: static;
+    }
+
+    .nav-glass{
+        margin: 0 1rem 0 0.5rem;
+    }
+
+    .nav-stickers{
+        display: flex;
+    }
+}
+
+@media screen and (min-width: 71rem) {
+    .nav-wrapper {
+        padding: 0;
+    }
+}
+
+/* ------------------------------- CONTENT ------------------------------- */
+.nav-placeholder-block{
+    display: block;
+    height: 4rem;
+}
+
+.content-wrapper{
+    max-width: 71rem;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card{
+    position: relative;
+    display: block;
+    box-shadow: 0 1px 1px rgb(173 168 168 / 10%);
+    border: 1px solid rgba(0,0,0,0.1);
+    background-color: #fff;
+    border-radius: 3px;
+    margin-bottom: 0.25rem;
+}
+
+/* -------------------- FEED CARDS -------------------- */
+.content-feed-cards{
+    display: block;
+    width: 100%;
+}
+
+.frame-featured-card-image{
+    width: 100%;
+    min-height: 7rem;
+}
+
+.featured-card-image{
+    position: relative;
+    background-color: #e2e2e2;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.featured-card-image > img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.featured-card-body{
+    margin: 1rem;
+    color: #222;
+}
+
+.featured-card-headline{
+    font-weight: 800;
+    font-size: 1.75rem;
+    line-height: 1.125;
+    margin-bottom: 0.125rem;
+    color:#222;
+    margin: 0;
+    padding: 0;
+}
+
+.featured-card-body{
+    display: inline-block;
+    color: #222;
+}
+
+.story-card{
+    display: flex;
+    flex-direction: row;
+    min-height: 6.5rem;
+}
+
+.story-card-image{
+    position: relative;
+    background-color: #e2e2e2;
+    width: 33%;
+    height: auto;
+    bottom: 0;
+    top: 0;
+    overflow: hidden;
+}
+
+.story-card-image > img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.story-card-body{
+    width: 66%;
+}
+
+.story-card-text{
+    padding: 0.5rem 0.5rem 0 0.5rem;
+}
+
+.story-card-text > h2{
+    line-break: strict;
+    font-weight: 600;
+    letter-spacing: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 1.375rem;
+    line-height: 1.2;
+}
+
+.story-card-text > p {
+    display: none;
+    color: #666;
+    margin-top: 0.25rem;
+    margin-bottom: 0;
+}
+
+.story-card-text > img {
+    display: none;
+    height: 1.75rem;
+    margin-left:-0.25rem;
+}
+
+
+/* -------------------- SIDEBAR -------------------- */
+.content-sidebar{
+    margin-top: 1.5rem;
+    display: block;
+}
+
+.list-unstyled {
+    padding-left: 0;
+    list-style: none;
+}
+
+/* ------------- NEWS section ------------- */
+.sidebar-news{
+    margin-bottom: 1.5rem;
+    border-top: 8px solid #222;
+    color: #222;
+    border-radius: 3px 3px 0 0;
+}
+
+.sidebar-news > .card{
+    padding: 1rem;
+}
+
+.buzzfeed-news-logo{
+    cursor: pointer;
+    display: block;
+    width: 7.5rem;
+    height: 1rem;
+}
+
+.buzzfeed-news-list-item{
+    padding-right: 0.25rem;
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;
+    font-size: 0.875rem;
+    line-height: 1.2;
+    font-family: "Proxima Nova",Helvetica,Arial,sans-serif;
+}
+
+.buzzfeed-news-list-item > article > span{
+    cursor: pointer;
+}
+
+.icon-news{
+    overflow: hidden;
+    margin-top: -0.25rem;
+    margin-left: -0.2rem;
+    height: 1.1rem;
+    line-height: 0;
+}
+
+/* ------------- TRENDING NOW section ------------- */
+.siderbar-trending-now{
+    margin-bottom: 1.5rem;
+    border-top: 8px solid #0f65ef;
+    color: #222;
+    border-radius: 3px 3px 0 0;
+    font-weight: 600;
+    letter-spacing: 0;
+}
+
+.siderbar-trending-now > .card{
+    padding: 1rem;
+}
+
+.siderbar-trending-now-logo{
+    cursor: pointer;
+    display: block;
+    width: 7rem;
+    height: 0.9rem;
+}
+
+.siderbar-trending-now-list-item{
+    cursor: pointer;
+    display: list-item;
+    margin: 1rem 0 0.5rem 0;
+    line-height: 1.2;
+}
+
+.siderbar-trending-now-list-item > img{
+    margin-bottom: 0.5rem;
+    display: block;
+    width: 100%;
+}
+
+.siderbar-trending-now-footer{
+    margin-bottom: -1rem;
+    margin-left: -1rem;
+    margin-right: -1rem;
+    border-top: 1px solid rgba(0,0,0,0.2);
+    padding: 1rem;
+    font-weight: 600;
+    letter-spacing: 0;
+    color: #0f65ef;
+}
+
+.icon-next{
+    float: right;
+}
+
+@media screen and (min-width: 40rem) {
+    .content-wrapper {
+        padding-top: 2rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .featured-card-body{
+        margin: 1.5rem;
+    }
+
+    .featured-card-headline{
+        line-height: 1;
+        font-size: 2.25rem;
+    }
+
+    .story-card-text{
+        padding: 1rem 1rem 0 1rem;
+    }
+
+    .story-card-text > p {
+        display: block;
+    }
+
+    .story-card-text > img {
+        display: block;
+    }
+    
+}
+
+@media screen and (min-width: 52rem) {
+    .content-feed-cards {
+        float: left;
+        width: 66.66667%;
+    }
+
+    .content-sidebar{
+        width: 30%;
+        margin-top: 0;
+        padding-left: 1.5rem;
+        display: inline-block;
+    }
+
+    .card{
+        margin-bottom: 0.5rem;
+    }
+
+    .frame-featured-card-image{
+        min-height: 14.5rem;
+    }
+
+    .featured-card-image {
+        height: 11.75rem;
+    }
+}
+
+@media screen and (min-width: 64rem) {
+    .featured-card-image {
+        height: auto;
+    }
+
+    .featured-card-headline{
+        font-size: 2.625rem;
+    }
+}
+
+@media screen and (min-width: 71rem) {
+    .content-wrapper {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
