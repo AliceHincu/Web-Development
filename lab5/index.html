@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <meta charset="UTF-8">
+        <title>lab5</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $(".show-btn").click(function(){
+                    $(".dialog-window").show();
+                });
+                $(".close-btn").click(function(){
+                    $(".dialog-window").hide();
+                })
+
+                var $dragging = null; // element that is dragged (the dialog window)
+                var relX = null; // the left distance between cursor and title container
+                var relY = null; // the top distance between cursor and title container
+                var elementWidth = $(this).outerWidth();
+                var elementHeight = $(this).outerHeight();
+
+                $(".title-container").on({
+                    mousedown: function(event){
+                        $dragging = $(this).parent();
+                        $dragging.css( "background-color", "red" );
+
+                        var parentOffset = $dragging.offset(); // the left+top distance between parent and corner 
+                        relX = event.pageX - parentOffset.left;
+                        relY = event.pageY - parentOffset.top;
+                    },
+                    mousemove: function(event){
+                        if($dragging){
+                            $dragging.offset({
+                                top : event.pageY-relY,
+                                left : event.pageX-relX
+                            })
+                        }
+                    },
+                    mouseup: function(){
+                        $dragging.css( "background-color", "white" );
+                        $dragging = null;
+                    },
+                    /*mouseleave: function(){
+                        $dragging.css( "background-color", "white" );
+                        $dragging = null;
+                    }*/
+                })
+            })
+        </script>
+    </head>
+
+    <body>
+        <div class="parent-div">
+            <button class="show-btn">Click me to show dialog window!</button>
+            <div class="dialog-window">
+                <div class="title-container">
+                    <span><b>Basic dialog</b></span>
+                    <button class="close-btn">X</button>
+                </div>
+                <div class="text-container">
+                    <p>This is the default dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the 'x' icon.</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
