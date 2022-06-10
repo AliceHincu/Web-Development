@@ -1,0 +1,41 @@
+<h1>Add reservation!</h1>
+
+<!--
+<div class="form-container">
+    <form [formGroup]="form" (ngSubmit)="submit()">
+        <div class="form-group">
+            <label for="Room-id">Room id:</label>
+            <select formControlName="RoomID" class="form-control" type="number" id="Room-id" name="Room-id" required [(ngModel)]="reservationModel.RoomID" ngModel>
+                <option *ngFor="let id of availableRoomsId">{{id}}</option>
+            </select> 
+            <label for="Check-in">Check-in:</label>
+            <input formControlName="CheckIn" class="form-control" type="date" id="Check-in" name="Check-in" (change)="getAvailableRoomIds()" [(ngModel)]="reservationModel.CheckIn" ngModel>
+            <label for="Check-out">Check-out:</label>
+            <input formControlName="CheckOut" class="form-control" type="date" id="Check-out" name="Check-out" (change)="getAvailableRoomIds()" [(ngModel)]="reservationModel.CheckOut" ngModel>
+        </div>
+        <button id="submit-btn" type="submit">Submit</button>
+    </form>
+</div>
+-->
+
+
+<form #reservationForm="ngForm" novalidate (ngSubmit)="onAdd()">
+    <div class="form-group">
+        <!-- <label> Room id: </label>
+        <select type="number" class="form-control" name="Room-id" id="Room-id" required #model="ngModel" [(ngModel)]="reservationModel.RoomID" ngModel> 
+               <option *ngFor="let id of availableRoomsId">{{id}}</option>
+        </select> -->
+  
+        <label> Check-in: </label>
+        <input type="date" class="form-control" name="Check-in" required #model="ngModel" [(ngModel)]="reservationModel.CheckIn" ngModel (change)="updateDate()"> 
+  
+        <label> Check-out: </label>
+        <input type="date" class="form-control" name="Check-out" required #model="ngModel" [(ngModel)]="reservationModel.CheckOut" ngModel (change)="updateDate()"> 
+    </div>
+  
+    <button class="btn btn-dark" type="submit"
+            [disabled]="reservationForm.form.invalid"> Add </button>
+  
+    <span [innerHTML]="addResponse" class="alert-info" style="margin-left: 5px"></span>
+  
+</form>

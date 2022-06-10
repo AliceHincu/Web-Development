@@ -1,0 +1,36 @@
+<h1>Delete reservation!</h1>
+
+<form #reservationIdForm="ngForm" novalidate (ngSubmit)="onDelete()">
+    <div class="form-group">
+        <label> Reservation id: </label>
+        <select type="number" class="form-control" name="Reservation-id" id="Reservation-id" required #model="ngModel" [(ngModel)]="reservationID" ngModel> 
+               <option *ngFor="let id of reservationsId">{{id}}</option>
+        </select> 
+    </div>
+  
+
+    <!--
+    <button type="submit"
+            [disabled]="reservationIdForm.form.invalid"> Delete </button>
+    -->
+    <span [innerHTML]="deleteResponse" class="alert-info" style="margin-left: 5px"></span>
+  
+</form>
+
+<button (click)="open(content)" href="javascript:void(0);">Delete</button>
+
+<ng-template #content let-c="close" let-d="dismiss">    
+    <div class="modal-header">    
+        <h4 class="modal-title" id="modal-basic-title">Confirmation</h4>    
+        <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">    
+            <span aria-hidden="true">×</span>    
+        </button>    
+    </div>    
+    <div class="modal-body">    
+        <p>Are you sure to delete this?</p>    
+    </div>    
+    <div class="modal-footer">    
+        <button type="button" class="btn btn-outline-dark" (click)="d('Cross click')">Cancel</button>    
+        <button type="button" class="btn btn-outline-dark" (click)="c('yes')">Yes</button>    
+    </div>    
+</ng-template>   
