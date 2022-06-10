@@ -1,0 +1,25 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="mvcExample-withAjaxJSON:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/mvcExample_withAjaxJSON_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="mvcExample-withAjaxJSON/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="mvcExample-withAjaxJSON" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="json-simple-1.1.1" />
+          <element id="library" level="project" name="mysql-connector-java-8.0.24" />
+          <element id="file-copy" path="$PROJECT_DIR$/libs/javax.servlet.jsp.jstl.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/libs/json-simple-1.1.1.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/libs/mysql-connector-java-8.0.24.jar" />
+          <element id="library" level="project" name="gson-2.9.0" />
+        </element>
+      </element>
+      <element id="library" level="project" name="javax.servlet" />
+      <element id="library" level="project" name="json-simple-1.1.1" />
+      <element id="library" level="project" name="mysql-connector-java-8.0.24" />
+      <element id="library" level="project" name="gson-2.9.0" />
+    </root>
+  </artifact>
+</component>
