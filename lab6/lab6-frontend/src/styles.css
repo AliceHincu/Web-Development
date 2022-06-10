@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+th {
+    background-color: #0089d8;
+    color: white;
+}
+
+tr:nth-child(even) {background-color: #c8eaff;}
+
+table {
+    border-collapse: collapse;
+}

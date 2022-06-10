@@ -1,0 +1,11 @@
+<div class="sidenav">
+    <ul class="sidenav-nav">
+        <li class="sidenav-nav-item" *ngFor="let data of navData">
+            <a class="sidenav-nav-link" [routerLink]="[data.routeLink]">
+                <img class="sidenav-link-icon" [src]="data.icon">
+                <span class="sidenav-link-text">{{data.label}}</span>
+                <i class="fa-solid fa-house"></i>
+            </a>
+        </li>
+    </ul>
+</div>

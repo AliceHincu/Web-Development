@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <meta charset="UTF-8" />
+    <title>lab6</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="script.js"></script>
+    <script src="reservationScript.js"></script>
+  </head>
+
+  <body>
+    <p>Welcome to RoomReservation!</p>
+    <form id="optionsForm">
+      <p>Filter by:</p>
+    </form>
+
+    <div id="rooms">
+
+    </div>
+    <button id="prev" onclick="prev()">Prev</button>
+    <button id="next" onclick="next()">Next</button>
+
+    <p id="today-date">Today's date is: </p>
+    <p><b>Reserve a room:</b></p>
+    <form id="reserveForm">
+      <label for="Room-id">Room id:</label>
+      <input type="number" id="Room-id" name="Room-id" value="1">
+      <label for="Check-in">Check-in:</label>
+      <input type="date" id="Check-in" name="Check-in">
+      <label for="Check-out">Check-out:</label>
+      <input type="date" id="Check-out" name="Check-out" value="2022-04-12">
+      <input id="submit-btn-reserve" onclick="submitForReserving(event)" type="submit" value="Submit">
+    </form>
+
+    <p>~Reservations</p>
+    <div id="reservations">
+
+    </div>
+
+    <p><b>Cancel reservation:</b></p>
+    <form id="cancelReservationForm">
+      <label for="Reservation-id-cancel">Reservation id:</label>
+      <input type="number" id="Reservation-id-cancel" name="Reservation-id-cancel" value="1">
+     <input id="submit-btn-cancel" onclick="submitForCancel(event)" type="submit" value="Cancel">
+    </form>
+  </body>
+</html>

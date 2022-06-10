@@ -1,0 +1,12 @@
+<h1>Browse reservations!</h1>
+
+
+<table class="reservations">
+    <th *ngFor="let column of columns">{{column}}</th>
+    <tr *ngFor="let reservation of reservations">
+      <td>{{reservation.ID}}</td> 
+      <td>{{reservation.RoomID}}</td>
+      <td>{{reservation.CheckIn}}</td>
+      <td>{{reservation.CheckOut}}</td>
+    </tr>
+</table>
