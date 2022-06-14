@@ -1,0 +1,141 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="~/Scripts/jquery-2.0.3.js"></script>
+    <link rel="stylesheet" href="~/Content/style.css">
+    <title>Main Page</title>
+</head>
+
+<body>
+    @{
+        AspMVCex.Models.SoftwareDeveloper user = (AspMVCex.Models.SoftwareDeveloper)ViewData["user"];
+    }
+    <p>Welcome @user.name!</p>
+
+    <button onclick="getProjects(@user.id)">Get all projects!</button>
+
+    <div id='hiddenValue' style="display: none">@user.id</div>
+
+    <div id="showProjects" style="display: none">
+        <table class="projectTable">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>ProjectManagerId</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Members</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+    </div>
+
+    <button onclick="getProjectsMemberOf('@user.name')">Get all projects you are member of!</button>
+
+    <div id="showProjects2" style="display: none">
+        <table class="projectTable2">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>ProjectManagerId</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Members</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+    </div>
+
+    <p>Assign developer to projects:</p>
+    <form method="POST" action="/Main/AddDevToProjects" style="display: flex; flex-direction: column; width: 30%">
+        <label for="name">Name of developer: </label>
+        <input type="text" id="name" name="name">
+        <label for="projects">Name of projects(separated by empty space): </label>
+        <input type="text" id="projects" name="projects">
+        <button onclick="addDevToProjects()">Add developer to projects!</button>
+    </form>
+
+    <p>Filter</p>
+    <button onclick="getDevs()">Get developers!</button>
+
+    <div id="showDevelopers" style="display: none">
+        <table class="developersTable">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Skills</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+            <label for="filter">Filter by skill: </label>
+            <input type="text" id="filter" name="filter">
+            <button onclick="filter()">Filter!</button>
+        
+
+    </div>
+
+
+
+    @*
+        <button onclick="getFilesPaginated(@user.id)">Get files paginated!</button>
+
+        <div id="showFilesPaginated" style="display: none">
+            <table class="fileTablePaginated">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>UserId</th>
+                        <th>FileName</th>
+                        <th>FilePath</th>
+                        <th>Size</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+
+            <button id="previousButton" onclick="prev(@user.id)">Previous</button>
+            <button id="nextButton" onclick="next(@user.id)">Next</button>
+
+        </div>
+
+        <button onclick="getFilesPaginatedServer(@user.id)">Get files paginated server!</button>
+
+        <div id="showFilesPaginatedServer" style="display: none">
+            <table class="fileTablePaginatedServer">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>UserId</th>
+                        <th>FileName</th>
+                        <th>FilePath</th>
+                        <th>Size</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+
+            <button id="previousButton2" onclick="prev2(@user.id)">Previous</button>
+            <button id="nextButton2" onclick="next2(@user.id)">Next</button>
+
+        </div>
+
+        <button onclick="findMostPopularFile(@user.id)">Find most popular file(s)!</button>
+        <div id="mostPopularFiles"></div>*@
+    <script src="~/Scripts/script.js" type="text/javascript"></script>
+</body>
+
+</html>
