@@ -1,0 +1,49 @@
+
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+    <p>Hello!</p>
+    <button onclick="getAllFiles()">GetAllFiles!</button>
+    <section id="section" style="display: none">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>UserId</th>
+                    <th>Filename</th>
+                    <th>Filepath</th>
+                    <th>Size</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </section>
+
+    <button onclick="getFilesPaginated()">Get files paginated!</button>
+
+    <div id="showFilesPaginated" style="display: none">
+        <table class="fileTablePaginated">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>UserId</th>
+                    <th>FileName</th>
+                    <th>FilePath</th>
+                    <th>Size</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+        <button id="previousButton" onclick="prev()">Previous</button>
+        <button id="nextButton" onclick="next()">Next</button>
+
+    </div>
+</body>

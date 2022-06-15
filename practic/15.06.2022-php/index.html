@@ -1,0 +1,39 @@
+
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+    <p>Add new entry to keyword table!</p>
+    <form>
+        <label for="key">Key: </label>
+        <input id="key" type="text">
+        <br>
+        <label for="value">Value: </label>
+        <input id="value" type="text">
+        <br>
+        <button onclick="addKeyword()">Add!</button>
+    </form>
+
+    <p>Search for documents based on the title</p>
+    <form>
+        <label for="title">Title of document: </label>
+        <input id="title" type="text">
+        <br>
+        <button onclick="filterDocuments()">Search!</button>
+    </form>
+    <section id="section" style="display: none">
+        <table class="table"></table>
+        <ul class="list"></ul>
+    </section>
+
+    <section id="section2" style="display: none">
+        <p>Rendered document</p>
+        <table class="table2"></table>
+    </section>
+</body>
