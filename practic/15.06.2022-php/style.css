@@ -1,0 +1,2 @@
+.table tr:nth-child(even) {background: #CCC}
+li:nth-child(even) {background: #CCC}
