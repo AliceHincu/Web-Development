@@ -1,0 +1,41 @@
+﻿
+@using AspMVCex.Models;
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ViewGetStudents</title>
+</head>
+<body>
+    <div>
+        @{
+            List<Student> slist = (List<Student>)
+                ViewData["studentList"];
+        }
+        <table>
+            <tr>
+                <th>id</th>
+                <th>name</th>
+                <th>password</th>
+                <th>group_id</th>
+            </tr>
+            @foreach (Student stud in slist)
+            {
+                <tr>
+                    <td>@stud.Id</td>
+                    <td>@stud.Nume</td>
+                    <td>@stud.Password</td>
+                    <td>@stud.Group_id</td>
+                </tr>
+            }
+        </table>
+    </div>
+
+</body>
+</html>
