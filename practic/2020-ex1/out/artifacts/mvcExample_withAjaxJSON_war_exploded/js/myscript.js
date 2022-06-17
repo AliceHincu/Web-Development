@@ -33,12 +33,23 @@ function getJournals(username) {
 }
 
 function populateJournalsDd(journals) {
+    /**
+     * Populate the dropdown with the journals. The value will be their id and the text will be their name.
+     * @type {*|jQuery|HTMLElement}
+     */
+    let dropdown = $('#userJournals');
+    dropdown.empty();
+
     for (let i = 0; i < journals.length; i++) {
-        $('#userJournals').append('<option value="' + journals[i].id + '">' + journals[i].name + '</option>');
+        dropdown.append('<option value="' + journals[i].id + '">' + journals[i].name + '</option>');
     }
 }
 
 function getArticles() {
+    /**
+     * Get articles from backend then populate the table
+     * @type {*|string|jQuery}
+     */
     let journalId = $('#userJournals').val();
     getJournalArticles(journalId, function(articles){
         populateArticlesTable(articles);
@@ -64,6 +75,10 @@ function populateArticlesTable(articles) {
 }
 
 function getTodayDate(){
+    /**
+     * Helper function to get today's date.
+     * @type {Date}
+     */
     const today =  new Date();
     const day = today && today.getDate() || -1;
     const dayWithZero = day.toString().length > 1 ? day : '0' + day;
@@ -75,12 +90,14 @@ function getTodayDate(){
 }
 
 function addArticleToDb(event) {
+    /**
+     * Add article to database. It will also add the journal if it doesn't exist.
+     */
     event.preventDefault();
     let journalName = $('#inputJournalName').val();
     let summary = $('#inputSummary').val();
     let username = usernameCurrent;
     let date = getTodayDate();
-    console.log(journalName, summary, username, date);
 
     addArticle(username, journalName, summary, date, function (response){
         if(response){
@@ -93,12 +110,14 @@ function addArticleToDb(event) {
 
 
 function notifyNewArticles(){
-    // If someone adds a new article, the current user will be notified
-    // short polling
+    /**
+     *  If someone adds a new article, the current user will be notified.
+     *  Uses short polling.
+     */
+
     let lastSeenArticle;
     getLastArticle(function (response) {
         lastSeenArticle = response[0];
-        console.log(lastSeenArticle);
 
         // start loop
         setInterval(function () {
@@ -121,8 +140,9 @@ function notifyNewArticles(){
 }
 
 $(document).ready(function() {
+    // if we have 2 pages opened, we need global variable because the cookie value will change to the latest username.
     usernameCurrent = readCookie("username");
-    pageCurrent = 1;
+
     notifyNewArticles();
 })
 

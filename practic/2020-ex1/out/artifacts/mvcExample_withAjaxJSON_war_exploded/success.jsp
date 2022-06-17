@@ -5,7 +5,7 @@
   Time: 12:51 PM
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page import="webubb.domain.User" %>
+<%--<%@ page import="webubb.domain.User" %>--%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html>
@@ -35,17 +35,10 @@
 <section id="journalsSection">
     <select name="journals" id="userJournals"></select>
     <button id="getArticlesBtn" onclick='getArticles()'>Get Articles</button>
-    <button id="getArticlesPaginatedBtn" onclick='getArticlesPaginated()'>Get Articles Paginated</button>
 </section>
 
 <section id="articlesSection" style="display: none">
     <table id="articlesTable"></table>
-</section>
-
-<section id="paginatesSection" style="display: none">
-    <table id="paginatedTable"></table>
-    <button onclick="prevPage()">Prev</button>
-    <button onclick="nextPage()">Next</button>
 </section>
 
 <br><br>
@@ -59,9 +52,8 @@
         <button onclick="addArticleToDb(event)">Add article</button>
     </form>
 </section>
-<section id="update-result-section"></section>
 
-    <script src="js/myscript.js"></script>
+<script src="js/myscript.js"></script>
 
 </body>
 </html>
