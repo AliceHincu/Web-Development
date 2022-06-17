@@ -1,0 +1,31 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>FilterStudents</title>
+    <script src="~/Scripts/jquery-2.0.3.js"></script>
+    <script>
+			$(document).ready(function(){
+				$("#button").click(function() {
+					// parameter name: "test" from the ajax call is not actually used
+					$.get("/Main/GetStudentsFromGroup", {group_id : $("#group_id").val()},
+						function(data,status) {
+						$("#maindiv").html(data);
+					});
+				});
+			});
+    </script>
+</head>
+<body>
+    GroupID: <input type="text" id="group_id" /><br />
+    <input id="button" type="button" value="get students" />
+    Lista studentilor din grupa:
+    <div id="maindiv"></div><br />
+</body>
+</html>

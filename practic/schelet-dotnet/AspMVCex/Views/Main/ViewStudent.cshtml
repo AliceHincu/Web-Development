@@ -1,0 +1,27 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ViewStudent</title>
+</head>
+<body>
+    <div>
+        @{
+            AspMVCex.Models.Student stud = (AspMVCex.Models.Student)
+                ViewData["student"];
+        }
+
+        <b>Student Details </b><br />
+        ID: @stud.Id  <br />
+        Name : @stud.Nume <br />
+        Password: @stud.Password <br />
+        Group_id: @stud.Group_id <br />
+    </div>
+</body>
+</html>
