@@ -2,15 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cad3e816-f6d5-4c1a-a378-de9e47cded36" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/homework6/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/homework6/angular.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homework6/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/homework6/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homework6/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/homework6/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homework6/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/homework6/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homework6/src/app/app.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/homework6/src/app/app.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homework6/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/homework6/src/app/app.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homework6/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/homework6/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homework6/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/homework6/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homework6/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/homework6/src/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../practic/2020-ex1/out/artifacts/mvcExample_withAjaxJSON_war_exploded/WEB-INF/classes/webubb/controller/ArticlesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../practic/2020-ex1/out/artifacts/mvcExample_withAjaxJSON_war_exploded/WEB-INF/classes/webubb/controller/ArticlesController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../practic/2020-ex1/out/artifacts/mvcExample_withAjaxJSON_war_exploded/WEB-INF/classes/webubb/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../practic/2020-ex1/out/artifacts/mvcExample_withAjaxJSON_war_exploded/WEB-INF/classes/webubb/controller/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../practic/2020-ex1/out/artifacts/mvcExample_withAjaxJSON_war_exploded/WEB-INF/classes/webubb/model/DBManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/../practic/2020-ex1/out/artifacts/mvcExample_withAjaxJSON_war_exploded/WEB-INF/classes/webubb/model/DBManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../practic/2020-ex1/out/artifacts/mvcExample_withAjaxJSON_war_exploded/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../practic/2020-ex1/out/artifacts/mvcExample_withAjaxJSON_war_exploded/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../practic/2020-ex1/out/artifacts/mvcExample_withAjaxJSON_war_exploded/js/ajax-utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/../practic/2020-ex1/out/artifacts/mvcExample_withAjaxJSON_war_exploded/js/ajax-utils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../practic/2020-ex1/out/artifacts/mvcExample_withAjaxJSON_war_exploded/js/myscript.js" beforeDir="false" afterPath="$PROJECT_DIR$/../practic/2020-ex1/out/artifacts/mvcExample_withAjaxJSON_war_exploded/js/myscript.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../practic/2020-ex1/out/artifacts/mvcExample_withAjaxJSON_war_exploded/success.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../practic/2020-ex1/out/artifacts/mvcExample_withAjaxJSON_war_exploded/success.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../practic/2020-ex1/out/production/mvcExample-withAjaxJSON/webubb/controller/ArticlesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../practic/2020-ex1/out/production/mvcExample-withAjaxJSON/webubb/controller/ArticlesController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../practic/2020-ex1/out/production/mvcExample-withAjaxJSON/webubb/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../practic/2020-ex1/out/production/mvcExample-withAjaxJSON/webubb/controller/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../practic/2020-ex1/out/production/mvcExample-withAjaxJSON/webubb/domain/Notifications.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../practic/2020-ex1/out/production/mvcExample-withAjaxJSON/webubb/domain/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../practic/2020-ex1/out/production/mvcExample-withAjaxJSON/webubb/model/DBManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/../practic/2020-ex1/out/production/mvcExample-withAjaxJSON/webubb/model/DBManager.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,7 +21,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/homework6" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="29bFU9VSr7XVhnoeL0YFdtlrZ0l" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -31,7 +34,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Sakura/Desktop/Facultate/Semestrul IV/WEB/lab11"
+    "last_opened_file_path": "D:/Facultate/Web-Development/lab6/lab6-frontend"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -43,7 +46,11 @@
       <option name="presentableId" value="Default" />
       <updated>1653373890844</updated>
       <workItem from="1653373892110" duration="20000" />
+      <workItem from="1655302832972" duration="20000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
 </project>

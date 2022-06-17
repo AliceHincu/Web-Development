@@ -385,7 +385,7 @@ function filter(){
             response = JSON.parse(response);
             let tableFilter = $('#table-filter');
             insertDataTable(tableFilter, headersEntities, response);
-            
+
         }
     }).fail(console.error);
 }

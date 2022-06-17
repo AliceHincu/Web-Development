@@ -42,33 +42,33 @@ public class SkeletonController extends HttpServlet {
 
     private void get(String action, HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
         if(GET.equals(action)) {
-            ArrayList<Entity> entities = dbmanager.getEntities();
-
-            JSONArray jsonAssets = new JSONArray();
-            for (Entity e : entities) {
-                jsonAssets.add(e.convertToJSONObject());
-            }
-
-            PrintWriter out = new PrintWriter(response.getOutputStream());
-            out.println(jsonAssets.toJSONString());
-            out.flush();
+//            ArrayList<Entity> entities = dbmanager.getEntities();
+//
+//            JSONArray jsonAssets = new JSONArray();
+//            for (Entity e : entities) {
+//                jsonAssets.add(e.convertToJSONObject());
+//            }
+//
+//            PrintWriter out = new PrintWriter(response.getOutputStream());
+//            out.println(jsonAssets.toJSONString());
+//            out.flush();
         }
     }
 
     private void filter(String action, HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
         if(FILTER.equals(action)) {
-            String name = request.getParameter("name");
-
-            ArrayList<Entity> entities = dbmanager.filter(name);
-
-            JSONArray jsonAssets = new JSONArray();
-            for (Entity e : entities) {
-                jsonAssets.add(e.convertToJSONObject());
-            }
-
-            PrintWriter out = new PrintWriter(response.getOutputStream());
-            out.println(jsonAssets.toJSONString());
-            out.flush();
+//            String name = request.getParameter("name");
+//
+//            //ArrayList<Entity> entities = dbmanager.filter(name);
+//
+//            JSONArray jsonAssets = new JSONArray();
+//            for (Entity e : entities) {
+//                jsonAssets.add(e.convertToJSONObject());
+//            }
+//
+//            PrintWriter out = new PrintWriter(response.getOutputStream());
+//            out.println(jsonAssets.toJSONString());
+//            out.flush();
         }
     }
 

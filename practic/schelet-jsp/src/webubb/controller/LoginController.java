@@ -8,7 +8,7 @@ package webubb.controller;
 import java.io.IOException;
 
 
-
+import webubb.domain.Player;
 import webubb.model.DBManager;
 import webubb.domain.User;
 
@@ -27,12 +27,11 @@ public class LoginController extends HttpServlet {
                           HttpServletResponse response) throws ServletException, IOException {
 
         String username = request.getParameter("username");
-        String password = request.getParameter("password");
         RequestDispatcher rd = null;
 
         DBManager dbmanager = new DBManager();
-        boolean canAuthenticate = dbmanager.authenticate(username, password);
-        if (canAuthenticate) {
+        Player p = dbmanager.authenticate(username);
+        if (p != null) {
             rd = request.getRequestDispatcher("/success.jsp");
 
             // Session

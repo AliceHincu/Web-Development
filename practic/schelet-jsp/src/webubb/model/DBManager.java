@@ -2,6 +2,7 @@ package webubb.model;
 
 import webubb.domain.Asset;
 import webubb.domain.Entity;
+import webubb.domain.Player;
 import webubb.domain.User;
 
 import java.sql.*;
@@ -33,32 +34,91 @@ public class DBManager {
         }
     }
 
-    public boolean authenticate(String username, String password) {
+    public Player authenticate(String username) {
         ResultSet rs;
+        Player p = null;
         try {
-            rs = stmt.executeQuery("select * from users where username='"+username+"' and password='"+password+"'");
+            rs = stmt.executeQuery("select * from player where name='"+username+"'");
             if (rs.next()) {
-                return true;
+                return new Player(
+                        rs.getInt("ID"),
+                        rs.getString("name"),
+                        rs.getString("position")
+                );
             }
             rs.close();
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return false;
+        return p;
     }
 
-    public ArrayList<Entity> getEntities() {
-        ArrayList<Entity> entities = new ArrayList<>();
+    private int getIdPlayer(String name) {
+        int id = -1;
+        String sql = "SELECT ID FROM player WHERE name = '" + name + "'";
         ResultSet rs;
-        String sql = "select * from entities";
+        try {
+            rs = stmt.executeQuery(sql);
+            if (rs.next()) {
+                id = rs.getInt("ID");
+            }
+            rs.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return id;
+    }
+    public String getPositionPlayer(String name) {
+        String s = "";
+        String sql = "SELECT position FROM player WHERE name = '" + name + "'";
+        ResultSet rs;
+        try {
+            rs = stmt.executeQuery(sql);
+            if (rs.next()) {
+                s = rs.getString("position");
+            }
+            rs.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return s;
+    }
+
+
+    public ArrayList<Player> getEntities(int degree, String username) {
+        // sql query to find useriD
+        int usernameId = this.getIdPlayer(username);
+        String sql;
+        sql = "SELECT * FROM player WHERE ID in( ";
+//                "SELECT IDplayer2 FROM 'teammembers` WHERE IDPlayer1 IN
+//                (SELECT IDplayer2 FROM `teammembers` WHERE IDplayer1 IN
+//                        (SELECT IDplayer2 FROM `teammembers` WHERE IDplayer1 = 1 )
+//                )
+
+        if(degree == 1) {
+            sql += "SELECT IDplayer2 FROM `teammembers` WHERE IDplayer1 = " + usernameId;
+        } else if(degree == 2) {
+            sql += "SELECT IDplayer2 FROM `teammembers` WHERE IDplayer1 IN " +
+                    "(SELECT IDplayer2 FROM `teammembers` WHERE IDplayer1 = " + usernameId + ")";
+        } else if(degree == 3) {
+            sql += "SELECT IDplayer2 FROM `teammembers` WHERE IDPlayer1 IN" +
+                    "(SELECT IDplayer2 FROM `teammembers` WHERE IDplayer1 IN" +
+                        "(SELECT IDplayer2 FROM `teammembers` WHERE IDplayer1 = " + usernameId + ")" +
+                    ")";
+        }
+
+        sql += ");";
+        System.out.println(sql);
+        ArrayList<Player> entities = new ArrayList<>();
+        ResultSet rs;
 
         try {
             rs = stmt.executeQuery(sql);
             while (rs.next()) {
-                entities.add(new Entity(
-                        rs.getInt("id"),
+                entities.add(new Player(
+                        rs.getInt("ID"),
                         rs.getString("name"),
-                        rs.getDate("date")
+                        rs.getString("position")
                 ));
             }
             rs.close();
@@ -125,18 +185,18 @@ public class DBManager {
         return affectedRows > 0;
     }
 
-    public ArrayList<Entity> filter(String name) {
-        ArrayList<Entity> entities = new ArrayList<>();
+    public ArrayList<Player> filter(String name) {
+        ArrayList<Player> entities = new ArrayList<>();
         ResultSet rs;
-        String sql = "select * from entities where name like '%" + name + "%'";
+        String sql = "select * from player where name like '%" + name + "%'";
 
         try {
             rs = stmt.executeQuery(sql);
             while (rs.next()) {
-                entities.add(new Entity(
-                        rs.getInt("id"),
+                entities.add(new Player(
+                        rs.getInt("ID"),
                         rs.getString("name"),
-                        rs.getDate("date")
+                        rs.getString("position")
                 ));
             }
             rs.close();

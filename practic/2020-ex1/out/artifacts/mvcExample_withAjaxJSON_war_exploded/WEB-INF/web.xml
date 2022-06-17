@@ -9,10 +9,6 @@
         <servlet-class>webubb.controller.LoginController</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>AssetsController</servlet-name>
-        <servlet-class>webubb.controller.AssetsController</servlet-class>
-    </servlet>
-    <servlet>
         <servlet-name>ArticlesController</servlet-name>
         <servlet-class>webubb.controller.ArticlesController</servlet-class>
     </servlet>
@@ -24,10 +20,6 @@
     <servlet-mapping>
         <servlet-name>LoginController</servlet-name>
         <url-pattern>/LoginController</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>AssetsController</servlet-name>
-        <url-pattern>/AssetsController</url-pattern>
     </servlet-mapping>
 
 

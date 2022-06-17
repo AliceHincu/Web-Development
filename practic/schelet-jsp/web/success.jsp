@@ -12,10 +12,8 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Welcome</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<%--    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">--%>
     <script src="js/jquery-2.0.3.js"></script>
-    <script src="js/ajax-utils.js"></script>
-    <script src="js/schelet-script.js"></script>
     <script src="js/script.js"></script>
 </head>
 <body>
@@ -24,68 +22,64 @@
     if (username != null) {
         out.println("Welcome " + username);
     }
+    out.println("<p id='hidden' style='display: none'>" + username + "</p>");
 %>
 
 
-    <h2>Select</h2>
-    <button onclick="get()">Get!</button>
-    <section id="get-section" style="display: none;">
-        <h3>Normal table</h3>
-        <table id="table" class="table"></table>
-        <h3>Paginated table</h3>
-        <table id="table-paginated" class="table"></table>
-        <button id="previousButton" onclick="prev()">Prev</button>
-        <button id="nextButton" onclick="next()">Next</button>
-        <h3>List</h3>
-        <ul id="list"></ul>
-    </section>
-
-    <h2>Add</h2>
-    <section id="add-section">
-        <form id="add-form">
-            <label for="name">Name: </label>
-            <input id="name" type="text">
-            <br>
-            <label for="date">Date: </label>
-            <input id="date" type="date">
-            <br>
-            <button onclick="add()">Add!</button>
-        </form>
-    </section>
-
-    <h2>Delete</h2>
-    <button onclick="showDeleteSection()">Get to delete!</button>
-    <section id="delete-section" style="display: none">
-        <select id="dropdown"></select>
-        <br>
-        <button onclick="myDelete()">Delete!</button>
-    </section>
-
-    <h2>Update</h2>
-    <button onclick="showUpdateSection()">Get to update!</button>
-    <section id="update" style="display: none">
-        <select id="dropdown2"></select>
-        <br>
-        <button onclick="showUpdateForm()">Select for update!</button>
-        <section id="update-section" style="display: none;">
-            <p>Selected Id: <span id="id"></span></p>
-
-            <label for="name2">Name: </label>
-            <input id="name2" type="text">
-            <br>
-            <label for="date2">Date: </label>
-            <input id="date2" type="date">
-            <br>
-            <button onclick="update()">Update!</button>
-        </section>
-    </section>
-
-    <h2>Filter</h2>
-    <button onclick="showFilterSection()">Get to filter!</button>
-    <section id="filter-section" style="display: none">
+    <h2>Filter - search for a player</h2>
+        <input id="filter-input" type="text" name="filter-input">
         <table id="table-filter" class="table"></table>
-        <input id="filter-input" type="text">
-        <button onclick="filter()">Filter!</button>
-    </section>
+
+    <h2>N-th degree membership (1,2 or 3)</h2>
+        <input id="degree-input" type="text" name="degree-input">
+        <button onclick="getDegree()">Get degree relationships!</button>
+        <section id="get-section" style="display: none;">
+            <h3>Players</h3>
+            <table id="table" class="table"></table>
+            <p>Check to have only the players with the same position: </p>
+            <input type="checkbox" id="myCheck" onclick="isChecked()">
+        </section>
+
+<%--    <h2>Add</h2>--%>
+<%--    <section id="add-section">--%>
+<%--        <form id="add-form">--%>
+<%--            <label for="name">Name: </label>--%>
+<%--            <input id="name" type="text">--%>
+<%--            <br>--%>
+<%--            <label for="date">Date: </label>--%>
+<%--            <input id="date" type="date">--%>
+<%--            <br>--%>
+<%--            <button onclick="add()">Add!</button>--%>
+<%--        </form>--%>
+<%--    </section>--%>
+
+<%--    <h2>Delete</h2>--%>
+<%--    <button onclick="showDeleteSection()">Get to delete!</button>--%>
+<%--    <section id="delete-section" style="display: none">--%>
+<%--        <select id="dropdown"></select>--%>
+<%--        <br>--%>
+<%--        <button onclick="myDelete()">Delete!</button>--%>
+<%--    </section>--%>
+
+<%--    <h2>Update</h2>--%>
+<%--    <button onclick="showUpdateSection()">Get to update!</button>--%>
+<%--    <section id="update" style="display: none">--%>
+<%--        <select id="dropdown2"></select>--%>
+<%--        <br>--%>
+<%--        <button onclick="showUpdateForm()">Select for update!</button>--%>
+<%--        <section id="update-section" style="display: none;">--%>
+<%--            <p>Selected Id: <span id="id"></span></p>--%>
+
+<%--            <label for="name2">Name: </label>--%>
+<%--            <input id="name2" type="text">--%>
+<%--            <br>--%>
+<%--            <label for="date2">Date: </label>--%>
+<%--            <input id="date2" type="date">--%>
+<%--            <br>--%>
+<%--            <button onclick="update()">Update!</button>--%>
+<%--        </section>--%>
+<%--    </section>--%>
+
+
 </body>
 </html>
